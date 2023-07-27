@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+    <meta name="author" content="AdminKit">
+    <meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="/img/icons/icon-48x48.png">
+    <link rel="canonical" href="https://demo-basic.adminkit.io/">
+    <title>Sistem Admin Layanan Aduan Desa Mata</title>
+    <link href="/css/app.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">/* Chart.js */
+/*
+* DOM element rendering detection
+* https://davidwalsh.name/detect-node-insertion
+*/
+@keyframes chartjs-render-animation {
+from { opacity: 0.99; }
+to { opacity: 1; }
+}
+
+.chartjs-render-monitor {
+animation: chartjs-render-animation 0.001s;
+}
+
+/*
+* DOM element resizing detection
+* https://github.com/marcj/css-element-queries
+*/
+.chartjs-size-monitor,
+.chartjs-size-monitor-expand,
+.chartjs-size-monitor-shrink {
+position: absolute;
+direction: ltr;
+left: 0;
+top: 0;
+right: 0;
+bottom: 0;
+overflow: hidden;
+pointer-events: none;
+visibility: hidden;
+z-index: -1;
+}
+
+.chartjs-size-monitor-expand > div {
+position: absolute;
+width: 1000000px;
+height: 1000000px;
+left: 0;
+top: 0;
+}
+
+.chartjs-size-monitor-shrink > div {
+position: absolute;
+width: 200%;
+height: 200%;
+left: 0;
+top: 0;
+}
+    </style>
+</head>
+
+<body>
+	<div class="wrapper">
+        <nav id="sidebar" class="sidebar js-sidebar">
+            <div class="sidebar-content js-simplebar" data-simplebar="init">
+                <div class="simplebar-wrapper" style="margin: 0px;">
+                    <div class="simplebar-height-auto-observer-wrapper">
+                        <div class="simplebar-height-auto-observer"></div>
+                    </div>
+                    <div class="simplebar-mask">
+                        <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                            <div
+                                class="simplebar-content-wrapper"
+                                tabindex="0"
+                                role="region"
+                                aria-label="scrollable content"
+                                style="height: 100%; overflow: hidden;"
+                            >
+                                <div class="simplebar-content" style="padding: 0px;">
+                                    <a class="sidebar-brand" href="/admin/dashboard">
+                                        <span class="align-middle">Admin aduan desa Mata</span>
+                                    </a>
+                                    <ul class="sidebar-nav">
+                                        <li class="sidebar-header">
+                                            Pages
+                                        </li>
+                                        <li class="sidebar-item active">
+                                            <a class="sidebar-link" href="/admin/dashboard">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="feather feather-sliders align-middle"
+                                                >
+                                                    <line
+                                                        x1="4"
+                                                        y1="21"
+                                                        x2="4"
+                                                        y2="14"
+                                                    ></line>
+                                                    <line
+                                                        x1="4"
+                                                        y1="10"
+                                                        x2="4"
+                                                        y2="3"
+                                                    ></line>
+                                                    <line
+                                                        x1="12"
+                                                        y1="21"
+                                                        x2="12"
+                                                        y2="12"
+                                                    ></line>
+                                                    <line
+                                                        x1="12"
+                                                        y1="8"
+                                                        x2="12"
+                                                        y2="3"
+                                                    ></line>
+                                                    <line
+                                                        x1="20"
+                                                        y1="21"
+                                                        x2="20"
+                                                        y2="16"
+                                                    ></line>
+                                                    <line
+                                                        x1="20"
+                                                        y1="12"
+                                                        x2="20"
+                                                        y2="3"
+                                                    ></line>
+                                                    <line
+                                                        x1="1"
+                                                        y1="14"
+                                                        x2="7"
+                                                        y2="14"
+                                                    ></line>
+                                                    <line
+                                                        x1="9"
+                                                        y1="8"
+                                                        x2="15"
+                                                        y2="8"
+                                                    ></line>
+                                                    <line
+                                                        x1="17"
+                                                        y1="16"
+                                                        x2="23"
+                                                        y2="16"
+                                                    ></line>
+                                                </svg>
+                                                <span class="align-middle">Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item">
+                                            <a class="sidebar-link" href="/admin/data-aduan">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="feather feather-table align-middle"
+                                                >
+                                                    <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"></path>
+                                                </svg>
+                                                <span class="align-middle">Kelola Aduan</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item">
+                                            <a class="sidebar-link" href="/admin/data-users">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="feather feather-table align-middle"
+                                                >
+                                                    <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"></path>
+                                                </svg>
+                                                <span class="align-middle">Kelola User</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item">
+                                            <a class="sidebar-link" href="/admin/data-instansi">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="feather feather-table align-middle"
+                                                >
+                                                    <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"></path>
+                                                </svg>
+                                                <span class="align-middle">Kelola Insansi</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item">
+                                            <a class="sidebar-link" href="/admin/data-case">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="feather feather-table align-middle"
+                                                >
+                                                    <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"></path>
+                                                </svg>
+                                                <span class="align-middle">Kelola Solusi</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item">
+                                            <a class="sidebar-link" href="pages-profile.html">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="feather feather-user align-middle"
+                                                >
+                                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                    <circle cx="12" cy="7" r="4"></circle>
+                                                </svg>
+                                                <span class="align-middle">Profile</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="simplebar-placeholder" style="width: auto; height: 513px;"></div>
+                </div>
+                <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
+                    <div class="simplebar-scrollbar simplebar-visible" style="width: 0px; display: none;"></div>
+                </div>
+                <div class="simplebar-track simplebar-vertical" style="visibility: hidden;">
+                    <div class="simplebar-scrollbar" style="height: 0px; transform: translate3d(0px, 0px, 0px); display: none;"></div>
+                </div>
+            </div>
+        </nav>
+
+		<div class="main">
+            <nav class="navbar navbar-expand navbar-light navbar-bg">
+                <a class="sidebar-toggle js-sidebar-toggle">
+                    <i class="hamburger align-self-center"></i>
+                </a>
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav navbar-align">
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-icon dropdown-toggle"
+                                href="#"
+                                id="alertsDropdown"
+                                data-bs-toggle="dropdown"
+                            >
+                                <div class="position-relative">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="feather feather-bell align-middle"
+                                    >
+                                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                    </svg>
+                                    <span class="indicator">4</span>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
+                                <div class="dropdown-menu-header">
+                                    4 New Notifications
+                                </div>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="feather feather-alert-circle text-danger"
+                                                >
+                                                    <circle cx="12" cy="12" r="10"></circle>
+                                                    <line
+                                                        x1="12"
+                                                        y1="8"
+                                                        x2="12"
+                                                        y2="12"
+                                                    ></line>
+                                                    <line
+                                                        x1="12"
+                                                        y1="16"
+                                                        x2="12.01"
+                                                        y2="16"
+                                                    ></line>
+                                                </svg>
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="text-dark">Update completed</div>
+                                                <div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
+                                                <div class="text-muted small mt-1">30m ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="feather feather-bell text-warning"
+                                                >
+                                                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="text-dark">Lorem ipsum</div>
+                                                <div class="text-muted small mt-1">Aliquam ex eros, imperdiet vulputate hendrerit et.</div>
+                                                <div class="text-muted small mt-1">2h ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="feather feather-home text-primary"
+                                                >
+                                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                                </svg>
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="text-dark">Login from 192.186.1.8</div>
+                                                <div class="text-muted small mt-1">5h ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="feather feather-user-plus text-success"
+                                                >
+                                                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                                    <circle cx="8.5" cy="7" r="4"></circle>
+                                                    <line
+                                                        x1="20"
+                                                        y1="8"
+                                                        x2="20"
+                                                        y2="14"
+                                                    ></line>
+                                                    <line
+                                                        x1="23"
+                                                        y1="11"
+                                                        x2="17"
+                                                        y2="11"
+                                                    ></line>
+                                                </svg>
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="text-dark">New connection</div>
+                                                <div class="text-muted small mt-1">Christina accepted your request.</div>
+                                                <div class="text-muted small mt-1">14h ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="dropdown-menu-footer">
+                                    <a href="#" class="text-muted">Show all notifications</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="feather feather-settings align-middle"
+                                >
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                                </svg>
+                            </a>
+                            <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                                <img src="/img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall">
+                                <span class="text-dark">Charles Hall</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item" href="pages-profile.html">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="feather feather-user align-middle me-1"
+                                    >
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg> Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="feather feather-pie-chart align-middle me-1"
+                                    >
+                                        <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                                        <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                                    </svg> Analytics
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="index.html">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="feather feather-settings align-middle me-1"
+                                    >
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                                    </svg> Settings &amp; Privacy
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="feather feather-help-circle align-middle me-1"
+                                    >
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                        <line
+                                            x1="12"
+                                            y1="17"
+                                            x2="12.01"
+                                            y2="17"
+                                        ></line>
+                                    </svg> Help Center
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Log out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+			<main class="content">
+				<div class="container-fluid p-0">
+
+					<h1 class="h3 mb-3">Data Aduan</h1>
+
+					
+					<div class="row">
+						<div class="col-12 d-flex">
+							<div class="card flex-fill">
+								<div class="card-header">
+
+									<h5 class="card-title mb-0">Aduan Terbaru</h5>
+								</div>
+								<table class="table table-hover my-0">
+									<thead>
+										<tr>
+											<th>Aduan</th>
+											<th class="d-none d-xl-table-cell">Dikirim</th>
+											<th class="d-none d-xl-table-cell">Ditinjau</th>
+											<th class="col-sm-3">Pesan</th>
+											<th class="d-none d-md-table-cell">Pengadu</th>
+										<th class="d-none d-md-table-cell">Aksi</th></tr>
+									</thead>
+									<tbody id="data-aduan">
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+                    <div id="tb_tinjau" class="row" style="display: none;">
+						<div class="col-12 d-flex">
+							<div class="card flex-fill">
+								<div class="card-header">
+
+									<h5 class="card-title mb-0">Tinjau Aduan</h5>
+								</div>
+								<table class="table table-hover my-0">
+									<thead>
+										<tr>
+											<th>Aduan</th>
+											<th class="d-none d-xl-table-cell">Dikirim</th>
+											<th class="d-none d-xl-table-cell">Ditinjau</th>
+											<th class="d-none d-md-table-cell">Status</th>
+											<th class="d-none d-md-table-cell">Pengadu</th>
+                                            <th class="d-none d-md-table-cell">No WA</th>
+										    <th class="d-none d-md-table-cell">Proses</th>
+                                        </tr>
+									</thead>
+									<tbody id="tinjau_aduan">
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+                    <div id="proses_aduan" class="row" style="display: none;">
+                    <div  class="w-50 justify-content-center align-items-center mx-auto d-flex">
+                        <div class="card d-flex justify-content-center align-items-center ml-3">
+                          <div class="card-header">
+                            <h5 class="card-title mb-12 h-100">Memproses Aduan</h5>
+                          </div>
+                          <div class="body-card ms-3 mb-5">
+                            <p id="ada">Silahkan menghubungi pihak <b id="pihak"></b> atas nama <b id="nama_pihak"></b> dengan mengklik tombol dibawah ini!</p>
+                            <p id="adilan"></p>
+                            <a id="wa" class="btn w-50 btn-success rounded-pill d-flex align-items-center justify-content-center mx-auto"><i class="fa fa-whatsapp"></i></a>
+                            <div class="row confirm_div mx-auto d-flex">
+                                <p>Tandai telah memproses?</p>
+                                <button disabled="disabled" value="confirm" class="confirm_btn col-md-3"><i class="fa fa-check"></i></button>
+                                <p id="success_confirm" style="display: none;">Tunggu respon dari klien</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    </div>
+
+
+				</div>
+			</main>
+
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-6 text-start">
+							<p class="mb-0">
+								<a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>AdminKit</strong></a> - <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>Bootstrap Admin Template</strong></a>								©
+							</p>
+						</div>
+						<div class="col-6 text-end">
+							<ul class="list-inline">
+								<li class="list-inline-item">
+									<a class="text-muted" href="https://adminkit.io/" target="_blank">Support</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="https://adminkit.io/" target="_blank">Help Center</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="https://adminkit.io/" target="_blank">Privacy</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="https://adminkit.io/" target="_blank">Terms</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script src="/js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function formatDate(timestamp) {
+    const date = new Date(timestamp);
+
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+
+    // Membuat string dengan format yang diinginkan
+    const formattedDate = `${day}-${month}-${year}`;
+
+    return formattedDate;
+  }
+
+  $(document).ready(function() {
+  $.get('/admin/tabel_aduan', function(data) {
+    // Mendapatkan referensi ke elemen tbody
+    var tbody = $('#data-aduan');
+
+    // Menghapus konten tabel sebelumnya
+    tbody.empty();
+
+    // Mengurutkan data berdasarkan row.id_aduan secara menurun
+    data.sort((a, b) => b.id_aduan - a.id_aduan);
+
+    $.each(data, function(index, row) {
+      if (row.status === 10 || row.status === 9) {
+        // Jika nilai status adalah 10, maka lewati dan tidak tambahkan baris ke dalam tabel
+        return;
+      }
+      // Membuat baris tabel baru
+      var newRow = $('<tr>');
+      var id_user = row.id_user;
+      console.log(row);
+
+      // Menambahkan sel-sel ke dalam baris
+      var aduanCell = $('<td>').attr('name', 'aduan').text(row.aduan);
+      var dikirimCell = $('<td>').addClass('d-none d-xl-table-cell').text(formatDate(row.create_at));
+      var ditinjauCell;
+      if (row.confirm_at === null) {
+        ditinjauCell = $('<td>').addClass('d-none d-xl-table-cell').text('-');
+      } else {
+        ditinjauCell = $('<td>').addClass('d-none d-xl-table-cell').text(formatDate(row.confirm_at));
+      }
+      var pesanCell = $('<td>').addClass('d-none d-md-table-cell').text(row.pesan);
+      var pengaduCell = $('<td>').addClass('d-none d-md-table-cell').text(row.nama);
+
+      // Membuat elemen <td>
+      var actionCell = $('<td>');
+
+      // Membuat elemen <div> dengan kelas yang diinginkan
+      var divGroup = $('<div>').addClass('btn-group btn-group-sm mb-4');
+      divGroup.attr('role', 'group');
+      divGroup.attr('aria-label', 'Small button group');
+
+      // Membuat tombol-tombol <button>
+      var buttonLeft = $('<button>')
+        .attr('type', 'button')
+        .addClass('btn btn-warning')
+        .text('Tinjau')
+        .attr('data-id-aduan', row.id_aduan);
+
+      // Menambahkan tombol-tombol ke dalam elemen <div>
+      divGroup.append(buttonLeft);
+
+      // Menambahkan elemen <div> ke dalam elemen <td>
+      actionCell.append(divGroup);
+
+      newRow.append(aduanCell, dikirimCell, ditinjauCell, pesanCell, pengaduCell, actionCell);
+      console.log(pesanCell);
+
+      // Menambahkan baris ke dalam tbody
+      tbody.append(newRow);
+    });
+
+    var id_user = $(this).data('id_user');
+
+    // Event listener untuk tombol "Tinjau"
+    $('button[data-id-aduan]').on('click', function() {
+      var id_aduan = $(this).data('id-aduan');
+      tinjauData(id_aduan);
+    });
+  });
+});
+
+var IDaduan;
+
+function tinjauData(id_aduan) {
+  var data = {
+    id_aduan: id_aduan
+  };
+
+  $.ajax({
+    url: '/admin/tinjau_aduan',
+    method: 'post',
+    data: JSON.stringify(data),
+    contentType: 'application/json',
+    success: function(response) {
+      document.getElementById('tb_tinjau').style = 'block';
+      console.log('Data yang ditinjau:', response);
+      var tbody = $('#tinjau_aduan');
+      tbody.empty();
+      var newRow = $('<tr>');
+
+      // Menambahkan sel-sel ke dalam baris
+      var aduanCell = $('<td>').text(response[0].aduan);
+      var kirimCell = $('<td>').text(formatDate(response[0].created_at)); // Menggunakan properti "created_at"
+      var tinjauCell = $('<td>').text(formatDate(response[0].confirm_at));
+      var statusCell;
+      if (response[0].status === 1) {
+        statusCell = $('<td>').addClass('d-none d-md-table-cell badge bg-danger').text('belum ditinjau');
+      } else if (response[0].status === 2) {
+        statusCell = $('<td>').addClass('d-none d-md-table-cell badge bg-warning').text('ditinjau');
+      } else if (response[0].status === 3) {
+        statusCell = $('<td>').addClass('d-none d-md-table-cell badge bg-info').text('menunggu respos');
+      } else if (response[0].status === 4) {
+        statusCell = $('<td>').addClass('d-none d-md-table-cell badge bg-info').text('menunggu respos dari user');
+      } else if (response[0].status === 6) {
+        statusCell = $('<td>').addClass('d-none d-md-table-cell badge bg-danger').text('Tinjau kembali');
+      } else if (response[0].status === 8) {
+        statusCell = $('<td>').addClass('d-none d-md-table-cell badge bg-danger').text('Tinjauan Terakhir');
+      } 
+      else {
+        console.log('kesalahan saat mengolah status');
+        return;
+      }
+      
+      var pengaduCell = $('<td>').text(response[0].nama);
+      var waCell = $('<td>').text(response[0].wa);
+      var prosesCell = $('<td>');
+      var button = $('<button>')
+        .attr('type', 'button')
+        .addClass('btn btn-warning')
+        .text('proses')
+        .attr('id', 'proses')
+        .attr('data-id-aduan', response[0].id_aduan)
+        .attr('data-wa', response[0].wa)
+        .attr('case', response[0].aduan);
+
+      if (response[0].status === 4) {
+        button.prop('disabled', true);
+      }
+
+      prosesCell.append(button);
+
+      newRow.append(aduanCell, kirimCell, tinjauCell, statusCell, pengaduCell, waCell, prosesCell);
+      tbody.append(newRow);
+
+      $('#proses').on('click', function() {
+        var Jcase = response[0].aduan;
+        IDaduan = response[0].id_aduan;
+        var status = response[0].status;
+        console.log('Id aduannya adalah: ', IDaduan);
+        console.log('data yang dikirim adalah ', Jcase);
+        prosesData(Jcase, IDaduan, status);
+      });
+      var status = response[0].status;
+      $('hidden_status').val(status);
+    },
+    error: function(error) {
+      console.error('Terjadi kesalahan:', error);
+    }
+  });
+}
+
+function prosesData(Jcase, id_aduan, status) {
+  var data = {
+    Jcase: Jcase,
+    IDaduan: IDaduan,
+    status: status
+  };
+
+  $.ajax({
+    url: '/admin/proses',
+    method: 'post',
+    data: JSON.stringify(data),
+    contentType: 'application/json',
+    success: function(response) {
+      console.log('status adalah: ', status);
+      console.log('data aduan: ', response);
+      if (status === 6) {
+        $('#proses_aduan').css('display', 'block');
+        $('#pihak').text(response[1].instasi);
+        $('#nama_pihak').text(response[1].nama);
+        var icon = $('<i>').addClass('fa fa-whatsapp');
+        var wa = $('#wa').append(icon)
+          .text(response[1].no_wa)
+          .attr('href', 'https://wa.me/62' + response[1].no_wa)
+          .attr('target', '_blank');
+        $('#wa').on('click', function() {
+          $('.confirm_btn').removeAttr('disabled');
+        });
+      } else if (status === 8) {
+        if (response.lenght < 3) {
+  $('#proses_aduan').css('display', 'block');
+  $('#pihak').text(response[2].instasi);
+  $('#nama_pihak').text(response[2].nama);
+  var icon = $('<i>').addClass('fa fa-whatsapp');
+  var wa = $('#wa').append(icon)
+    .text(response[2].no_wa)
+    .attr('href', 'https://wa.me/62' + response[2].no_wa)
+    .attr('target', '_blank');
+  $('#wa').on('click', function() {
+    $('.confirm_btn').removeAttr('disabled');
+  });
+} else {
+    var waNumber = $('#proses').data('wa');
+  $('#proses_aduan').css('display', 'block');
+  $('#ada').css('display', 'none');
+  $('#adilan').text("kasus ini akan di bawa ke pengadilan silahkan hubungi pengadu dengan mengklik tombol dibawah ini");
+  var icon = $('<i>').addClass('fa fa-whatsapp');
+  var wa = $('#wa').append(icon)
+    .text(waNumber)
+    .attr('href', 'https://wa.me/62' + waNumber)
+    .attr('target', '_blank');
+  $('#wa').on('click', function() {
+    $('.confirm_btn').removeAttr('disabled');
+  });
+}
+      } else {
+        $('#proses_aduan').css('display', 'block');
+        $('#pihak').text(response[0].instasi);
+        $('#nama_pihak').text(response[0].nama);
+        var icon = $('<i>').addClass('fa fa-whatsapp');
+        var wa = $('#wa').append(icon)
+          .text(response[0].no_wa)
+          .attr('href', 'https://wa.me/62' + response[0].no_wa)
+          .attr('target', '_blank');
+        $('#wa').on('click', function() {
+          $('.confirm_btn').removeAttr('disabled');
+        });
+      }
+    },
+    error: function(error) {
+      console.error('Terjadi kesalahan:', error);
+    }
+  });
+
+  $(document).on('click', '.confirm_btn', function() {
+    var value = $(this).val(); // Mengambil nilai tombol yang diklik
+    var id_user = $(this).data('id_user');
+    var id_aduan = IDaduan;
+    $('.confirm_btn').css('display', 'none');
+    document.getElementById('success_confirm').style = 'block';
+    $.ajax({
+      url: '/admin/admin-respon',
+      method: 'POST',
+      data: {
+        value: value,
+        id_user: id_user,
+        id_aduan: id_aduan,
+        status: status
+      }, // Mengirim nilai tombol sebagai data
+      success: function(response) {
+        // Berhasil melakukan permintaan
+        console.log('Respon:', response);
+        // Lakukan operasi atau manipulasi lain dengan respons yang diterima
+      },
+      error: function(error) {
+        // Terjadi kesalahan dalam permintaan
+        console.error('Terjadi kesalahan:', error);
+      }
+    });
+  });
+}
+
+                      </script>
+
+
+</body>
+
+</html>

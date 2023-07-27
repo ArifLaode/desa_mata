@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Layanan Aduan Desa Mata</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/assets/img/favicon.png" rel="icon">
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Template Main CSS File -->
+  <link href="/assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: UpConstruction - v1.2.1
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="/" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.jpg" alt=""> -->
+        <h1 id="logo-desa">Desa Mata</h1>
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/tentang">Tentang Kami</a></li>
+          <li><a href="/layanan/Masyarakat" class="active">Layanan</a></li>
+          <li><a href="/kontak">Kontak</a></li>
+          <li><a href="/layanan/Masyarakat/riwayat"><i class="fa fa-history">  </i>Riwayat</a></li>
+          <li><a href="/layanan/logout"><i class="fa fa-sign-out">  </i>Logout</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('/assets/img/breadcrumbs-bg.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>Aduan Layanan Masyarakat</h2>
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li>Layanan</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- element navbar atas-->
+    
+
+   <div class="d-flex align-items-center hero">
+     <div class="container">
+       <div class="row justify-content-center">
+         <div class="col-lg-6 text-center mt-5">
+           <a data-aos="fade-down" class="text-center" style="color: black;">Anda login sebagai <b id="name">.</b> Untuk memulai menggunakan aplikasi sistem
+             pakar ini
+             silahkan menekan tombol mulai berikut untuk mengisi form yang telah disediakan.</a><br>
+             <button type="button" class="btn btn-success mt-5" data-bs-toggle="modal" data-bs-target=".modal">Mulai</button>
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="Labeli" aria-hidden="true">
+       <div class="modal-dialog">
+         <div class="modal-content">
+           <div class="modal-header">
+             <h5 class="modal-title" id="Labeli">Aplikasi pengujian</h5>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+           </div>
+           <div class="modal-body">
+            <section id="contact" class="contact">
+              <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <form action="/submit" method="post" role="form" class="php-email-form">
+                  <div class="form-group">
+                    <input type="text" name="nama" class="form-control" id="nama" placeholder="Masukkan Nama" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="wa" class="form-control" id="wa" placeholder="Masukkan Nomor WA" required>
+                  </div>
+                  <div class="form-group">
+                    <select id="aduan" name="aduan" class="form-control" aria-placeholder="Masukkan jenis aduan" required>
+                      <option disabled selected>Masukkan data aduan Anda</option>
+                      <option value="Sengketa Tanah">Sengketa Tanah</option>
+                      <option value="Masalah Air">Masalah Air</option>
+                      <option value="Masalah Ternak">Masalah Ternak</option>
+                      <option value="Masalah Infrastruktur">Masalah Infrastruktur</option>
+                      <option value="Kegiatan Masyarakat">Masalah Kegiatan Masyarakat</option>
+                      <option value="Keamanan Masyarakat">Masalah Keamanan Masyarakat</option>
+                      <option value="Masalah Medis">Masalah Tenaga Medis</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <textarea id="message" class="form-control" name="pesan" rows="5" placeholder="Pesan" required></textarea>
+                  </div>
+                  <div class="my-3">
+                    <div class="loading">Loading</div>
+                    <div class="error-message">Gagal Mengirim aduan. silahkan coba beberapa saat lagi!</div>
+                    <div class="sent-message">Aduan Anda telah terkirim. Kami akan menghubungi Anda lewat WA jika telah direspon. Terima Kasih!</div>
+                  </div>
+                  <div class="text-center"><button type="submit">Kirim Aduan</button></div>
+                </form>                
+              </div>
+            </section>
+           </div>
+           <p id="submitted"></p>
+         </div>
+         </div>
+ </div>
+ <br> 
+ <div class="admin_respon"></div>
+ <br><br>
+
+ 
+  </main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+
+<footer id="footer" class="footer">
+
+    <div class="footer-content position-relative">
+      <div class="container">
+        <div class="row">
+  
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>Desa Mata</h3>
+              <p>
+                Kecamatan Kambowa, 
+  <br>
+  Kabupaten Buton Utara<br>
+  Provinsi Sulawesi Tenggara, 93673 
+  <br><br>
+  
+                <strong>Telepon:</strong> +628 2211 115 439<br>
+                <strong>Email:</strong> desamata_official@gmail.com<br>
+              </p>
+              <div class="social-links d-flex mt-3">
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div><!-- End footer info column-->
+  
+          <div class="col-lg-8 col-md-8 right footer-links" style="text-align: right;">
+            <h4>Link Utama</h4>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/tentang">Tentang Kami</a></li>
+              <li><a href="/layanan">Layanan Masyarakat</a></li>
+              <li><a href="/kontak">Kontak</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+    <div class="footer-legal text-center position-relative">
+      <div class="container">
+        <div class="copyright">
+          &copy; Hak Cipta <strong><span>Desa Mata</span></strong>. Di Lindungi Oleh Undang-Undang
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/Telaga Bumi Nusantara-bootstrap-construction-website-template/ -->
+        </div>
+      </div>
+  
+  </footer>
+  </div>
+  <!-- End Footer -->
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/aos/aos.js"></script>
+  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/assets/vendor/php-email-form/validate.js"></script>
+  
+
+  <!-- Template Main JS File -->
+  <script src="/assets/js/main.js"></script>
+  <script>
+    $(document).ready(function() {
+  // Fetch user data
+  $.ajax({
+    url: '/layanan/Masyarakat/get-user',
+    method: 'GET',
+    success: function(response) {
+      console.log('Data pengguna:', response);
+      $('#name').text(response);
+    },
+    error: function(error) {
+      console.error('Terjadi kesalahan:', error);
+    }
+  });
+
+  // Fetch admin response data
+  $.ajax({
+    url: '/layanan/Masyarakat/admin-respon',
+    method: 'GET',
+    success: function(response) {
+      console.log(response);
+
+      // Filter data dengan status === 3
+      var dataStatus3 = response.filter(function(item) {
+        return item.status === 4 || item.status === 7 || item.status === 9;
+      });
+
+      // Ambil elemen dengan kelas .admin_response
+      var adminResponse = $('.admin_respon');
+
+      // Kosongkan elemen adminResponse
+      adminResponse.empty();
+
+      // Jika dataStatus3 tidak kosong, tampilkan elemen dengan kelas .admin_response
+      if (dataStatus3.length > 0) {
+        // Iterasi dataStatus3 untuk menambahkan elemen card dan mengisi pesan aduan
+        dataStatus3.forEach(function(item) {
+          var card = $('<div>').addClass('card mx-auto d-flex justify-content-center align-items-center w-50 mb-5');
+          var keluhan = $('<p>').addClass('keluahan').text('Aduan anda tentang  ' + item.aduan);
+          var tandaiSelesai = $('<p>').text('Tandi telah selesai');
+          var btnGroup = $('<div>').addClass('btn-group mb-3').attr('role', 'group').attr('aria-label', 'Default button group');
+          var confirmBtn1 = $('<button>').attr('type', 'button').addClass('confirm_btn btn btn-success').val('1').html('<i class="fa fa-check"></i>').attr('data-id-aduan', item.id_aduan).attr('data-status', item.status);
+          var confirmBtn2 = $('<button>').attr('type', 'button').addClass('confirm_btn btn btn-success').val('2').html('<i class="fa fa-times"></i>').attr('data-id-aduan', item.id_aduan).attr('data-status', item.status);
+
+          btnGroup.append(confirmBtn1, confirmBtn2);
+          card.append(keluhan, tandaiSelesai, btnGroup);
+          adminResponse.append(card);
+        });
+
+        // Tampilkan elemen dengan kelas .admin_response
+        adminResponse.show();
+      } else {
+        // Sembunyikan elemen dengan kelas .admin_response jika dataStatus3 kosong
+        adminResponse.hide();
+      }
+    },
+    error: function(error) {
+      console.error('Terjadi kesalahan:', error);
+    }
+  });
+});
+$(document).on('click', '.confirm_btn', function() {
+    var value = $(this).val(); // Ambil nilai (value) dari tombol yang diklik
+    var idAduan = $(this).data('id-aduan'); // Ambil nilai dari atribut data-id-aduan pada tombol yang diklik
+    var status = $(this).data('status');
+    console.log('status yang akan di kirimkan ke server adalah', status);
+    console.log('Value yang dikirim:', value);
+    console.log('Id Aduan:', idAduan);
+    var adminResponse = $('.admin_respon');
+    adminResponse.hide();
+
+    // Kirim nilai dan idAduan ke URL /layanan/Masyarakat/respon_user menggunakan AJAX dengan metode POST
+    $.ajax({
+        url: '/layanan/Masyarakat/respon_user',
+        method: 'POST',
+        data: { value: value, idAduan: idAduan, status: status },
+        success: function(response) {
+            console.log(response);
+            // Lakukan aksi lain jika diperlukan berdasarkan respons dari server
+        },
+        error: function(error) {
+            console.error('Terjadi kesalahan:', error);
+        }
+    });
+});
+  </script>
+</body>
+
+</html>
