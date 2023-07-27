@@ -1,7 +1,7 @@
 const mysql = require('mysql');
 
 const db = mysql.createConnection({
-    host: 'sql209.infinityfree.com',
+    host: 'http://185.27.134.10/',
     user: 'if0_34701946',
     password: '#Aramata12',
     database: 'des_tree'
