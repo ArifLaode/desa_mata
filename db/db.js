@@ -1,10 +1,10 @@
 const mysql = require('mysql');
 
 const db = mysql.createConnection({
-    host: 'ftpupload.net',
-    user: 'if0_34701946',
+    host: '103.56.204.45',
+    user: 'desamata_rasyid',
     password: '#Aramata12',
-    database: 'des_tree',
+    database: 'desamata_des_tree',
 });
 
 db.connect((err) => {
