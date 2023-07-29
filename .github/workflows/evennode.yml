@@ -1,10 +1,8 @@
-# This workflow will automatically deploy your application to www.evennode.com on push to main branch.
-
 name: Deploy to EvenNode
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main ] # Ganti "main" dengan nama branch yang ingin Anda deploy
 
 jobs:
   Deploy:
@@ -14,17 +12,20 @@ jobs:
     - name: Install SSH key
       uses: shimataro/ssh-key-action@v2
       with:
-        key: ${{ secrets.SSH_KEY }}
-        known_hosts: "desa-mata.ap-1.evennode.com"
+        key: ${{ secrets.SSH_KEY }} # Ganti "SSH_KEY" dengan nama secret untuk kunci SSH pribadi Anda
+        known_hosts: " "
+
     - name: Add git.evennode.com to known_hosts
       run: |
         ssh-keyscan -H git.evennode.com > ~/.ssh/known_hosts
+
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
-    - name: Deploy to evennode.com
+
+    - name: Deploy to EvenNode
       run: |
-        git remote add evennode ${{ secrets.EVENNODE_REPO_URL }}
-        git config --global user.email "${{ secrets.GIT_EMAIL }}"
-        git config --global user.name "${{ secrets.GIT_NAME }}"
-        git push evennode +main
+        git remote add evennode ${{ secrets.EVENNODE_REPO_URL }} # Ganti "EVENNODE_REPO_URL" dengan nama secret untuk URL repositori EvenNode Anda
+        git config --global user.email "${{ secrets.GIT_EMAIL }}" # Ganti "GIT_EMAIL" dengan nama secret untuk alamat email Git Anda
+        git config --global user.name "${{ secrets.GIT_NAME }}"   # Ganti "GIT_NAME" dengan nama secret untuk nama Git Anda
+        git push evennode +main  # Ganti "main" dengan nama branch yang ingin Anda deploy (sesuai dengan setting pada "on" di atas)
