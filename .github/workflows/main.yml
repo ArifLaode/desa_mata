@@ -2,8 +2,11 @@
 
 name: Deploy to EvenNode
 
-on:
+on: 
+  workflow_dispatch 
+  
   push:
+  
     branches: [ master ]
 
 jobs:
