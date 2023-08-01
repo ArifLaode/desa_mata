@@ -2602,6 +2602,17 @@ section {
   inset: 0;
 }
 
+.footer-content {
+  position: relative;
+}
+
+/* Aturan media query untuk layar medium (ukuran 768px hingga 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .footer-content {
+    margin-right: 0; /* Mengatur margin right menjadi 0 pada layar medium */
+  }
+}
+
 .footer .footer-content .footer-info {
   margin-bottom: 30px;
 }
