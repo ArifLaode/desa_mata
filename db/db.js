@@ -2,14 +2,7 @@ const mysql = require('mysql2');
 require('dotenv').config();
 
 
-const db = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_DATABASE,
-    port: process.env.PORT,
-    ssl: 'Amazon RDS'
-});
+const db = mysql.createConnection(process.env.DB_SERVER);
 
 db.connect((err) => {
     if (err) {
