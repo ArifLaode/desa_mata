@@ -2588,6 +2588,12 @@ section {
   position: relative;
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .footer {
+    padding: 40px 0; /* Atur tinggi padding pada layar medium */
+  }
+}
+
 .footer:before {
   content: "";
   background: rgba(0, 0, 0, 0.8);
