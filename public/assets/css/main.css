@@ -2590,6 +2590,7 @@ section {
 
 @media (min-width: 768px) and (max-width: 991px) {
   .footer {
+    font: 8px;
     padding: 40px 0; /* Atur tinggi padding pada layar medium */
   }
 }
