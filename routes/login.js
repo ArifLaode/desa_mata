@@ -7,7 +7,7 @@ const { error } = require('console');
 const { stat } = require('fs');
 
 
-router.post('/', (req, res) => {
+router.post('/', (req, res) => { 
     const NIK = req.body.NIK;
     const password = req.body.password;
 
